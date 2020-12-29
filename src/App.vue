@@ -1,9 +1,21 @@
 <template>
   <div id="app">
-    <h1>App</h1>
     <!-- 根级路由出口 -->
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({})
+</script>
+
+<style lang="scss" scoped>
+// 共享全局，不需手动注入
+// @import '~@/styles/variables.scss';
+
+.text {
+  color: $success-color;
+}
+</style>
