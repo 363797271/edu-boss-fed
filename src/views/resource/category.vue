@@ -2,7 +2,7 @@
   <div class="resourceCategory">
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <el-button @click="createOrEditDialogOpen(null)">添加</el-button>
+        <el-button size="small" type="primary" @click="createOrEditDialogOpen(null)">添加</el-button>
       </div>
       <el-table :data="categories" style="width: 100%">
         <el-table-column type="index" label="编号"></el-table-column>

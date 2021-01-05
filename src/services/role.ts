@@ -42,3 +42,34 @@ export const deleteRole = (id: number) => {
     url: `/boss/role/${id}`
   })
 }
+
+export const getAllRoles = () => {
+  return request({
+    method: 'GET',
+    url: '/boss/role/all'
+  })
+}
+
+interface Allocate {
+  userId: number
+  roleIdList?: number[]
+}
+
+export const allocateUserRoles = (data: Allocate) => {
+  return request({
+    method: 'POST',
+    url: '/boss/role/allocateUserRoles',
+    data
+  })
+}
+
+/**
+ * 获取用户的角色
+ * @param userId
+ */
+export const getUserRole = (userId: number) => {
+  return request({
+    method: 'GET',
+    url: `/boss/role/user/${userId}`
+  })
+}

@@ -55,12 +55,12 @@ export const getMenuNodeList = () => {
   })
 }
 
-interface Alloct {
+interface Allocate {
   roleId: number | string
   menuIdList: number[]
 }
 
-export const allocateRoleMenus = (data: Alloct) => {
+export const allocateRoleMenus = (data: Allocate) => {
   return request({
     method: 'POST',
     url: '/boss/menu/allocateRoleMenus',

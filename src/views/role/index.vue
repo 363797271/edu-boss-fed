@@ -4,7 +4,7 @@
       <div slot="header" class="clearfix">
         <el-form ref="queryForm" inline :model="queryData" label-width="120px">
           <el-form-item label="角色名称" prop="name">
-            <el-input v-model="queryData.name" placeholder="资源名称"></el-input>
+            <el-input v-model="queryData.name" placeholder="角色名称"></el-input>
           </el-form-item>
           <el-form-item>
             <el-button :loading="isLoading" @click="reset">重置</el-button>
@@ -12,7 +12,7 @@
           </el-form-item>
         </el-form>
       </div>
-      <el-button size="small" @click="createOrEditDialogOpen()">添加角色</el-button>
+      <el-button size="small" type="primary" @click="createOrEditDialogOpen()">添加角色</el-button>
       <el-divider />
       <el-table :data="roles" style="width: 100%" v-loading="isLoading">
         <el-table-column type="index" label="编号" :index="indexMethod"></el-table-column>

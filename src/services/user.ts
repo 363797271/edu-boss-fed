@@ -29,3 +29,48 @@ export const getUserInfo = () => {
     url: '/front/user/getInfo'
   })
 }
+
+interface QueryData {
+  currentPage?: number
+  pageSize?: number
+  phone?: string
+  userId?: number
+  startCreateTime?: string
+  endCreateTime?: string
+}
+
+export const getUserPages = (data: QueryData) => {
+  return request({
+    method: 'POST',
+    url: '/boss/user/getUserPages',
+    data
+  })
+}
+
+/**
+ * 启用用户
+ * @param userId
+ */
+export const enableUser = (userId: string | number) => {
+  return request({
+    method: 'GET',
+    url: '/boss/user/enableUser',
+    params: {
+      userId
+    }
+  })
+}
+
+/**
+ * 禁用用户
+ * @param userId
+ */
+export const forbidUser = (userId: string | number) => {
+  return request({
+    method: 'POST',
+    url: '/boss/user/forbidUser',
+    data: {
+      userId
+    }
+  })
+}

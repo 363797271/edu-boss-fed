@@ -2,7 +2,7 @@
   <div class="menu">
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <el-button @click="$router.push({ name: 'menu-create' })">添加菜单</el-button>
+        <el-button size="small" type="primary" @click="$router.push({ name: 'menu-create' })">添加菜单</el-button>
       </div>
       <el-table :data="menus" style="width: 100%">
         <el-table-column type="index" label="编号"></el-table-column>

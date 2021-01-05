@@ -25,7 +25,7 @@
           </el-form-item>
         </el-form>
       </div>
-      <el-button size="small" @click="createOrEditDialogOpen()">添加</el-button>
+      <el-button size="small" type="primary" @click="createOrEditDialogOpen()">添加</el-button>
       <el-button size="small" @click="$router.push({ name: 'resourceCategory' })">资源分类</el-button>
       <el-divider />
       <el-table :data="resources" style="width: 100%" v-loading="isLoading">

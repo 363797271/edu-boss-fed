@@ -60,3 +60,16 @@ export const getRoleResources = (roleId: string | number) => {
     }
   })
 }
+
+interface Allocate {
+  roleId: number | string
+  resourceIdList: number[]
+}
+
+export const allocateRoleResources = (data: Allocate) => {
+  return request({
+    method: 'POST',
+    url: '/boss/resource/allocateRoleResources',
+    data
+  })
+}
