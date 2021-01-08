@@ -2,11 +2,11 @@
   "routes": [
     {
       "src": "/front/(.*)",
-      "dest": "/api/proxy"
+      "dest": "/server/proxy"
     },
     {
       "src": "/boss/(.*)",
-      "dest": "/api/proxy"
+      "dest": "/server/proxy"
     }
   ]
 }
