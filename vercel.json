@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/front/:match*",
-      "destination": "/api/proxy"
+      "destination": "http://edufront.lagou.com/:match*"
     },
     {
       "source": "/boss/:match*",
-      "destination": "/api/proxy"
+      "destination": "http://eduboss.lagou.com/:match*"
     }
   ]
 }
