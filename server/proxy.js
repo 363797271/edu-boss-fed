@@ -1,5 +1,5 @@
 /* eslint-disable */
-const { createProxyMiddleware } = require('http-proxy-middleware')
+// const { createProxyMiddleware } = require('http-proxy-middleware')
 
 module.exports = (req, res) => {
   let target = ''
@@ -11,9 +11,11 @@ module.exports = (req, res) => {
     target = 'http://eduboss.lagou.com/'
   }
 
+  res.status(200).send(`URL:${req.url}, proxy to : ${target}`)
+
   // 创建代理对象并转发请求
-  createProxyMiddleware({
-    target,
-    changeOrigin: true
-  })
+  // createProxyMiddleware({
+  //   target,
+  //   changeOrigin: true
+  // })
 }
