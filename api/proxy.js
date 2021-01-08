@@ -5,7 +5,7 @@ module.exports = (req, res) => {
   let target = ''
 
   // 代理目标地址
-  if (req.url.startsWith('/front')) {
+  if (req.url.startsWith('/api')) {
     target = 'http://edufront.lagou.com'
   } else if (req.url.startsWith('/boss')) {
     target = 'http://eduboss.lagou.com'
@@ -14,6 +14,9 @@ module.exports = (req, res) => {
   // 创建代理对象并转发请求
   createProxyMiddleware({
     target,
-    changeOrigin: true
+    changeOrigin: true,
+    pathRewrite: {
+      '^/api/': '/'
+    }
   })(req, res)
 }

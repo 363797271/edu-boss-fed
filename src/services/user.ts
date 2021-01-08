@@ -14,7 +14,7 @@ interface User {
 export const login = (data: User) => {
   return request({
     method: 'POST',
-    url: '/front/user/login',
+    url: '/api/front/user/login',
     // `Axios` 当发现 `data` 的值是 `qs` 转化后的格式，会自动将 请求头 的 `Content-Type` 设置为 `application/x-www-form-urlencoded`。
     // headers: {
     //   'content-type': 'application/x-www-form-urlencoded'
