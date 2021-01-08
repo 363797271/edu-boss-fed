@@ -1,12 +1,13 @@
 {
-  "routes": [
+  "rewrites": [
+    { "source": "/user/:id", "destination": "/api/user" },
     {
-      "src": "/front/(.*)",
-      "dest": "/server/proxy"
+      "source": "/front",
+      "destination": "/server/proxy"
     },
     {
-      "src": "/boss/(.*)",
-      "dest": "/server/proxy"
+      "source": "/boss",
+      "destination": "/server/proxy"
     }
   ]
 }
