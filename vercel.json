@@ -1,12 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/front/:match*",
-      "destination": "http://edufront.lagou.com/:match*"
+      "source": "/front",
+      "destination": "/api/proxy"
     },
     {
-      "source": "/boss/:match*",
-      "destination": "http://eduboss.lagou.com/:match*"
+      "source": "/boss",
+      "destination": "/api/proxy"
     }
   ]
 }
