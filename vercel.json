@@ -1,13 +1,12 @@
 {
   "rewrites": [
-    { "source": "/user/:id", "destination": "/api/user" },
     {
       "source": "/front",
-      "destination": "/server/proxy"
+      "destination": "/api/proxy"
     },
     {
       "source": "/boss",
-      "destination": "/server/proxy"
+      "destination": "/api/proxy"
     }
   ]
 }
