@@ -127,8 +127,11 @@ const router = new VueRouter({
 // from: 从哪里来的路由信息
 // next: 通行的标志，路由守卫中一定要调用 next，否则页面无法展示
 router.beforeEach((to, from, next) => {
-  // to.matched 是一个数组（匹配到的路由记录）
-  if (to.matched.some(record => record.meta.requiresAuth)) {
+  if (to.path.startsWith('/front') || to.path.startsWith('/boss')) {
+    // API 接口直接放行
+    next()
+  } else if (to.matched.some(record => record.meta.requiresAuth)) {
+    // to.matched 是一个数组（匹配到的路由记录）
     if (!store.state.user) {
       next({
         name: 'login',
